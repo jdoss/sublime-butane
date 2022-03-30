@@ -1,0 +1,9 @@
+<snippet>
+  <content><![CDATA[
+# yaml-language-server: \$schema=https://raw.githubusercontent.com/Relativ-IT/Butane-Schemas/Release/Butane-Schema.json
+
+]]></content>
+  <tabTrigger>schema</tabTrigger>
+  <scope>source.bu</scope>
+  <description>Sets a YAML schema.</description>
+</snippet>

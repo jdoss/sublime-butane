@@ -1,0 +1,14 @@
+<snippet>
+  <content><![CDATA[
+ignition:
+  config:
+    merge:
+      - source: ${1:https://example.com/sample.ign}
+        verification:
+          hash: ${2:sha512-e2bb19fdbc3604f511b13d66f4c675f011a63dd967b97e2fe4f5d50bf6cb224e902182221ba0f9dd87c0bb4abcbd2ab428eb7965aa7f177eb5630e7a1793e2e6}
+
+]]></content>
+  <tabTrigger>ignmerge</tabTrigger>
+  <scope>source.bu</scope>
+  <description>Retrieve and merge a remote Ignition file.</description>
+</snippet>

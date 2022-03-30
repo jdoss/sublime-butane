@@ -1,0 +1,11 @@
+<snippet>
+  <content><![CDATA[
+    - name: rpm-ostree-countme.timer
+      enabled: false
+      mask: true
+
+]]></content>
+  <tabTrigger>disable-countme</tabTrigger>
+  <scope>source.bu</scope>
+  <description>Disable Count Me systemd timer.</description>
+</snippet>

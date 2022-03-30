@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[
+    - path: ${1:/etc/mycoolflle}
+      mode: ${2:0644}
+      overwrite: ${3:true}
+      user:
+        name: ${4:core}
+      group:
+        name: ${5:core}
+      contents:
+        inline: |
+          ${6:somecooldata}
+
+]]></content>
+  <tabTrigger>create-file</tabTrigger>
+  <scope>source.bu</scope>
+  <description>Create a file with inline data.</description>
+</snippet>

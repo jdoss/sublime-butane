@@ -1,0 +1,9 @@
+<snippet>
+  <content><![CDATA[
+    - path: ${1:/opt/mycooldir}
+
+]]></content>
+  <tabTrigger>create-dir</tabTrigger>
+  <scope>source.bu</scope>
+  <description>Create a directory with 0755 permissions.</description>
+</snippet>

@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[
+    - name: rpm-ostree-install-systemd-oomd.service
+      enabled: true
+      contents: |
+        [Unit]
+        Description=Layer rpms
+        # We run after `systemd-machine-id-commit.service` to ensure that
+        # `ConditionFirstBoot=true` services won't rerun on the next boot.
+        After=systemd-machine-id-commit.service
+        After=network-online.target
+        ConditionPathExists=!/var/lib/%N.stamp
+
+        [Service]
+        Type=oneshot
+        RemainAfterExit=yes
+        ExecStart=/usr/bin/rpm-ostree install --allow-inactive systemd-oomd-defaults
+        ExecStart=/bin/touch /var/lib/%N.stamp
+        ExecStart=/bin/systemctl --no-block reboot
+
+        [Install]
+        WantedBy=multi-user.target
+
+]]></content>
+  <tabTrigger>systemd-install-oomd</tabTrigger>
+  <scope>source.bu</scope>
+  <description>Create a systemd unit to install systemd-oomd with rpm-ostree.</description>
+</snippet>

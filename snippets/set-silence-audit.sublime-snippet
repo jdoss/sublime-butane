@@ -1,0 +1,16 @@
+<snippet>
+  <content><![CDATA[
+    - path: /etc/sysctl.d/20-silence-audit.conf
+      mode: 0644
+      contents:
+        inline: |
+          # Raise console message logging level from DEBUG (7) to WARNING (4)
+          # to hide audit messages from the interactive console
+          kernel.printk=4
+
+]]></content>
+  <tabTrigger>set-silence-audit</tabTrigger>
+  <scope>source.bu</scope>
+  <description>Set console message logging to WARNING.</description>
+</snippet>
+

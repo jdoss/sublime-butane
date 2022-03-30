@@ -1,0 +1,15 @@
+<snippet>
+  <content><![CDATA[
+    - path: /etc/profile.d/systemd-pager.sh
+      mode: 0644
+      contents:
+        inline: |
+          # Tell systemd to not use a pager when printing information
+          export SYSTEMD_PAGER=${1:cat}
+
+]]></content>
+  <tabTrigger>set-systemd-pager</tabTrigger>
+  <scope>source.bu</scope>
+  <description>Set SYSTEMD_PAGER.</description>
+</snippet>
+

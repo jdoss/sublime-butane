@@ -1,0 +1,14 @@
+<snippet>
+  <content><![CDATA[
+kernel_arguments:
+  should_exist:
+    - systemd.unified_cgroup_hierarchy=0
+    - mitigations=off
+  should_not_exist:
+    - mitigations=auto,nosmt
+
+]]></content>
+  <tabTrigger>set-kargs</tabTrigger>
+  <scope>source.bu</scope>
+  <description>Set Kernel arguments.</description>
+</snippet>

@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[
+    - name: custom-bootupd-auto.service
+      enabled: true
+      contents: |
+        [Unit]
+        Description=Bootupd automatic update
+
+        [Service]
+        ExecStart=/usr/bin/bootupctl update
+        RemainAfterExit=yes
+
+        [Install]
+        WantedBy=multi-user.target
+
+]]></content>
+  <tabTrigger>systemd-enable-bootupd</tabTrigger>
+  <scope>source.bu</scope>
+  <description>Automatic bootloader updates with bootupd.</description>
+</snippet>

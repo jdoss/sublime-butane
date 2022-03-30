@@ -1,0 +1,34 @@
+<snippet>
+  <content><![CDATA[
+    - name: docker.service
+      mask: true
+      enabled: false
+
+    - name: docker.socket
+      mask: true
+      enabled: false
+
+    - name: podman.socket
+      mask: false
+      enabled: true
+
+    - name: docker-to-podman-sock.service
+      enabled: true
+      contents: |
+        [Unit]
+        Description=Create a docker.sock symlink pointing to podman.sock
+        After=podman.service
+        ConditionPathExists=!/var/run/docker.sock
+
+        [Service]
+        Type=oneshot
+        ExecStart=-/usr/bin/bash -c "ln -s /var/run/podman/podman.sock /var/run/docker.sock"
+
+        [Install]
+        WantedBy=multi-user.target
+
+]]></content>
+  <tabTrigger>systemd-disable-docker</tabTrigger>
+  <scope>source.bu</scope>
+  <description>Replace Docker with Podman.</description>
+</snippet>

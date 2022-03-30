@@ -1,0 +1,7 @@
+<snippet>
+  <content><![CDATA[
+Hello, ${1:Dusty} this is a ${2:snippet}!
+]]></content>
+  <tabTrigger>hello</tabTrigger>
+  <scope>source.bu</scope> 
+</snippet>

@@ -1,0 +1,12 @@
+<snippet>
+  <content><![CDATA[
+    - path: /etc/sysctl.d/${1:90-sysrq.conf}
+      contents:
+        inline: |
+          ${2:kernel.sysrq = 0}
+
+]]></content>
+  <tabTrigger>set-sysctl</tabTrigger>
+  <scope>source.bu</scope>
+  <description>Set sysctl.d directives.</description>
+</snippet>

@@ -1,0 +1,14 @@
+<snippet>
+  <content><![CDATA[
+    - path: /etc/systemd/zram-generator.conf
+      mode: 0644
+      contents:
+        inline: |
+          # This config file enables a /dev/zram0 device with the default settings
+          [zram0]
+
+]]></content>
+  <tabTrigger>enable-zram</tabTrigger>
+  <scope>source.bu</scope>
+  <description>Enable Swap on ZRAM.</description>
+</snippet>

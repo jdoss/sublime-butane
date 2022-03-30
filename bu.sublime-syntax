@@ -1,0 +1,6 @@
+%YAML 1.2
+---
+name: Butane
+file_extensions: [bu]
+extends: Packages/YAML/YAML.sublime-syntax
+scope: source.bu

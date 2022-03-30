@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[
+    # See https://coreos.github.io/zincati/usage/updates-strategy/
+    - path: /etc/zincati/config.d/55-updates-strategy.toml
+      contents:
+        inline: |
+          [updates]
+          strategy = "periodic"
+          [[updates.periodic.window]]
+          days = [ "Sat", "Sun" ]
+          start_time = "22:30"
+          length_minutes = 60
+
+]]></content>
+  <tabTrigger>set-updates-time</tabTrigger>
+  <scope>source.bu</scope>
+  <description>Configure OS Updates with Zincati.</description>
+</snippet>

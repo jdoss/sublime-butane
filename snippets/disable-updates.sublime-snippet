@@ -1,0 +1,14 @@
+<snippet>
+  <content><![CDATA[
+  - path: /etc/zincati/config.d/90-disable-auto-updates.toml
+    mode: 0644
+    contents:
+      inline: |
+        [updates]
+        enabled = false
+
+]]></content>
+  <tabTrigger>disable-updates</tabTrigger>
+  <scope>source.bu</scope>
+  <description>Disable OS Updates with Zincati.</description>
+</snippet>

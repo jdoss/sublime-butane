@@ -1,0 +1,13 @@
+<snippet>
+  <content><![CDATA[
+    - path: /etc/profile.d/zz-default-editor.sh
+      overwrite: true
+      contents:
+        inline: |
+          export EDITOR=${1:vi}
+
+]]></content>
+  <tabTrigger>set-default-editor</tabTrigger>
+  <scope>source.bu</scope>
+  <description>Sets the default editor.</description>
+</snippet>

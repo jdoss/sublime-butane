@@ -1,0 +1,16 @@
+<snippet>
+  <content><![CDATA[
+    - path: ${1:/opt/tools/transmogrifier}
+      overwrite: ${2:true}
+      contents:
+        source: ${3:https://mytools.example.com/path/to/archive.gz}
+        compression: ${4:gzip}
+        verification:
+          hash: ${5:sha512-00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000}
+      mode: ${6:0555}
+
+]]></content>
+  <tabTrigger>download-file</tabTrigger>
+  <scope>source.bu</scope>
+  <description>Download a file, verify it's SHA512 hash and ungzip it to a location.</description>
+</snippet>

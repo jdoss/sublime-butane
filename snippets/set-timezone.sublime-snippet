@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+    - path: /etc/localtime
+      target: ../usr/share/zoneinfo/${1:America/Chicago}
+
+]]></content>
+  <tabTrigger>set-timezone</tabTrigger>
+  <scope>source.bu</scope>
+  <description>Sets the timezone.</description>
+</snippet>

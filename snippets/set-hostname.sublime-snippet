@@ -1,0 +1,12 @@
+<snippet>
+  <content><![CDATA[
+    - path: /etc/hostname
+      mode: 0644
+      overwrite: true
+      contents: ${1:dustymabe.rocks}
+
+]]></content>
+  <tabTrigger>set-hostname</tabTrigger>
+  <scope>source.bu</scope>
+  <description>Set the hostname.</description>
+</snippet>

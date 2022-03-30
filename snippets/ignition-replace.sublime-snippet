@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[
+ignition:
+  config:
+    replace:
+      source: ${1:https://example.com/sample.ign}
+  security:
+    tls:
+      certificate_authorities:
+        - source: ${2:https://example.com/source1}
+          verification:
+            hash: ${3:sha512-e2bb19fdbc3604f511b13d66f4c675f011a63dd967b97e2fe4f5d50bf6cb224e902182221ba0f9dd87c0bb4abcbd2ab428eb7965aa7f177eb5630e7a1793e2e6}
+
+]]></content>
+  <tabTrigger>ignreplace</tabTrigger>
+  <scope>source.bu</scope>
+  <description>Retrieve and replace a remote Ignition file.</description>
+</snippet>
