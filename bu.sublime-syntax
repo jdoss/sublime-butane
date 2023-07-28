@@ -1,5 +1,6 @@
 %YAML 1.2
 ---
+version: 2
 name: Butane
 file_extensions: [bu]
 extends: Packages/YAML/YAML.sublime-syntax
